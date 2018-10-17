@@ -8,34 +8,36 @@ localeTitle: دمج التصنيف
 
 بما أن هذه خوارزمية تستند إلى العودية ، فلدينا علاقة تكرارية لها. إن علاقة التكرار هي ببساطة طريقة لتمثيل مشكلة من حيث مشاكلها الثانوية.
 
-`T(n) = 2 * T(n / 2) + O(n)`
+```T(n) = 2 * T(n / 2) + O(n) ```
 
 وضعه في الإنجليزية بسيطة ، نقوم بتحليل المشكلة الفرعية إلى جزأين في كل خطوة ولدينا بعض العمل الخطي الذي يتعين علينا القيام به لدمج النصفين اللذين تم فرزهما معاً في كل خطوة.
-
- `T(n) = 2T(n/2) + n 
+```
+T(n) = 2T(n/2) + n 
      = 2(2T(n/4) + n/2) + n 
      = 4T(n/4) + n + n 
      = 4(2T(n/8) + n/4) + n + n 
      = 8T(n/8) + n + n + n 
      = nT(n/n) + n + ... + n + n + n 
      = n + n + ... + n + n + n 
+```
 ` 
 
 بإحصاء عدد التكرارات لـ n في المجموع في النهاية ، نرى أن هناك lg n + 1 منهم. وبالتالي فإن وقت التشغيل هو n (lg n + 1) = n lg n + n. نلاحظ أن ng n + n <n lg n + n lg n = 2n lg n لـ n> 0 ، وبالتالي فإن وقت التشغيل هو O (n lg n).
 
- `MergeSort(arr[], left,  right): 
- If right > l: 
-     1. Find the middle point to divide the array into two halves: 
-             mid = (left+right)/2 
-     2. Call mergeSort for first half: 
-             Call mergeSort(arr, left, mid) 
-     3. Call mergeSort for second half: 
-             Call mergeSort(arr, mid+1, right) 
-     4. Merge the two halves sorted in step 2 and 3: 
-             Call merge(arr, left, mid, right) 
- ``` 
+```Algorithm
+MergeSort(arr[], left,  right):
+If right > l:
+     1. Find the middle point to divide the array into two halves:
+             mid = (left+right)/2
+     2. Call mergeSort for first half:
+             Call mergeSort(arr, left, mid)
+     3. Call mergeSort for second half:
+             Call mergeSort(arr, mid+1, right)
+     4. Merge the two halves sorted in step 2 and 3:
+             Call merge(arr, left, mid, right)
+ ```
  
- ![Merge Sort Algorithm](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/300px-Merge_sort_algorithm_diagram.svg.png) 
+![Merge Sort Algorithm](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Merge_sort_algorithm_diagram.svg/300px-Merge_sort_algorithm_diagram.svg.png)
  
  ### Properties: 
  * Space Complexity: O(n) 
