@@ -258,3 +258,6 @@ C ++ - نهج تكراري int binarySearch (int arr \[\]، int start، int int�
 
 *   [بحث ثنائي (فيديو يوتيوب)](https://youtu.be/P3YID7liBug)
 *   [البحث الثنائي - CS50](https://www.youtube.com/watch?v=5xlIPT1FRcA)
+*   [ما هو البحث الثنائي (فيديو يوتيوب)](https://www.youtube.com/watch?v=j5uXyPJ0Pew&t=20s)
+*   [البحث الثنائي - GeeksQuiz](https://www.youtube.com/watch?v=T2sFYY-fT5o)
+*   [البحث الثنائي - كود مصري](https://www.youtube.com/watch?v=q8mL8fHKOtw)
